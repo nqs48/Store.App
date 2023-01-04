@@ -9,6 +9,7 @@ namespace Store.App.Infraestructura.AppRepositories
 {
     public interface IRepositoryBuy
     {
+
         IEnumerable<Buy> GetAllBuys();
         Buy AddBuy(Buy buy);
         Buy GetBuy(int idBuy);
