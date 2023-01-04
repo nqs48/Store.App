@@ -44,6 +44,17 @@ namespace Store.App.Infraestructura.AppRepositories
             return productFind;
         }
 
+        public Product LogicalDelete(int idProduct)
+        {
+            var productFind = _appContext.Products.SingleOrDefault(p => p.Id == idProduct);
+            if (productFind != null)
+            {
+                productFind.Enabled = false;
+                _appContext.SaveChanges();
+            }
+            return productFind;
+        }
+
         public Product GetProduct(int idProduct)
         {
             var productFind = _appContext.Products.FirstOrDefault(p => p.Id == idProduct);
@@ -66,5 +77,7 @@ namespace Store.App.Infraestructura.AppRepositories
             return productFind;
                
         }
+
+
     }
 }

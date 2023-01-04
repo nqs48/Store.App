@@ -61,6 +61,23 @@ namespace Store.App.Api.Controllers
 
         }
 
+
+        [HttpDelete]
+        [Route("delete_log/{idProduct:int}")]
+        public IActionResult LogicalDeleteProduct(int idProduct)
+        {
+            try
+            {
+                var productDeleted = _repoProduct.LogicalDelete(idProduct);
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK ELIMINADO", response = productDeleted });
+            }
+            catch (Exception error)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { error.Message });
+            }
+
+        }
+
         [HttpGet]
         [Route("get/{idProduct:int}")]
         public IActionResult getProduct(int idProduct)

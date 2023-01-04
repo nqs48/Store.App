@@ -13,6 +13,7 @@ namespace Store.App.Infraestructura.AppRepositories
         Product AddProduct(Product product);
         Product UpdateProduct(Product product);
         Product? DeleteProduct(int idProduct);
+        Product LogicalDelete(int idProduct);
         Product GetProduct(int idProduct);
     }
 }
