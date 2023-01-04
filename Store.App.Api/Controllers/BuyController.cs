@@ -10,6 +10,7 @@ namespace Store.App.Api.Controllers
     public class BuyController : ControllerBase
     {
         private static IRepositoryBuy _repoBuy = new RepositoryBuy(new Infraestructura.AppContext());
+        //private static IRepositoryProduct _repoProduct = new RepositoryProduct(new Infraestructura.AppContext());
 
         [HttpPost]
         [Route("add")]
