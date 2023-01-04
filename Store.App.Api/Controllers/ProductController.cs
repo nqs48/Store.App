@@ -61,6 +61,38 @@ namespace Store.App.Api.Controllers
 
         }
 
+        [HttpGet]
+        [Route("get/{idProduct:int}")]
+        public IActionResult getProduct(int idProduct)
+        {
+            try
+            {
+                Product product = _repoProduct.GetProduct(idProduct);
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK", response = product });
+            }
+            catch (Exception error)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { error.Message });
+            }
+
+        }
+
+        [HttpPut]
+        [Route("update")]
+        public IActionResult UpdateProduct([FromBody] Product product)
+        {
+            try
+            {
+                Product productUpdated = _repoProduct.UpdateProduct(product);
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK", response = productUpdated });
+            }
+            catch (Exception error)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { error.Message });
+            }
+
+        }
+
 
     }
 }

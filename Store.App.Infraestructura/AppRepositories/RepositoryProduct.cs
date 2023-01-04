@@ -44,16 +44,27 @@ namespace Store.App.Infraestructura.AppRepositories
             return productFind;
         }
 
-        
-
         public Product GetProduct(int idProduct)
         {
-            throw new NotImplementedException();
+            var productFind = _appContext.Products.FirstOrDefault(p => p.Id == idProduct);
+            return productFind;
         }
 
         public Product UpdateProduct(Product product)
         {
-            throw new NotImplementedException();
+            var productFind = _appContext.Products.FirstOrDefault(p => p.Id == product.Id);
+            if(productFind != null)
+            {
+                productFind.Name= product.Name is null? productFind.Name : product.Name;
+                productFind.InInventory = product.InInventory;
+                productFind.Enabled= product.Enabled;
+                productFind.Max= product.Max;
+                productFind.Min= product.Min;
+
+                _appContext.SaveChanges();
+            }
+            return productFind;
+               
         }
     }
 }
