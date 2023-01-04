@@ -33,9 +33,15 @@ namespace Store.App.Infraestructura.AppRepositories
         }
 
 
-        public void DeleteProduct(int idProduct)
+        public Product? DeleteProduct(int idProduct)
         {
-            throw new NotImplementedException();
+            var productFind= _appContext.Products.SingleOrDefault(p => p.Id == idProduct);
+            if (productFind != null)
+            {
+                _appContext.Products.Remove(productFind);
+                _appContext.SaveChanges();  
+            }
+            return productFind;
         }
 
         
