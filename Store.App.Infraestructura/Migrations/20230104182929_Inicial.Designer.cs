@@ -12,8 +12,8 @@ using Store.App.Infraestructura;
 namespace Store.App.Infraestructura.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20230104041014_Initial")]
-    partial class Initial
+    [Migration("20230104182929_Inicial")]
+    partial class Inicial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,8 +27,11 @@ namespace Store.App.Infraestructura.Migrations
 
             modelBuilder.Entity("Store.App.Dominio.Buy", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ClientName")
                         .HasColumnType("nvarchar(max)");
@@ -55,8 +58,8 @@ namespace Store.App.Infraestructura.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("BuyId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int?>("BuyId")
+                        .HasColumnType("int");
 
                     b.Property<bool>("Enabled")
                         .HasColumnType("bit");
@@ -83,13 +86,13 @@ namespace Store.App.Infraestructura.Migrations
             modelBuilder.Entity("Store.App.Dominio.Product", b =>
                 {
                     b.HasOne("Store.App.Dominio.Buy", null)
-                        .WithMany("products")
+                        .WithMany("Products")
                         .HasForeignKey("BuyId");
                 });
 
             modelBuilder.Entity("Store.App.Dominio.Buy", b =>
                 {
-                    b.Navigation("products");
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }
