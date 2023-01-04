@@ -27,9 +27,7 @@ namespace Store.App.Infraestructura.AppRepositories
 
         public Product AddProduct(Product product)
         {
-            var productAdd= _appContext.Products.Add(product);
-            _appContext.SaveChanges();
-            return productAdd.Entity;
+            
         }
 
 
