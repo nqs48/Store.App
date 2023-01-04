@@ -28,5 +28,23 @@ namespace Store.App.Api.Controllers
 
         }
 
+
+        [HttpGet]
+        [Route("all")]
+        public IActionResult ProductList()
+        {
+            IEnumerable<Product> productList = _repoProduct.GetAllProducts();
+            try
+            {
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK", response = productList });
+            }
+            catch (Exception error)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { error.Message, response = productList });
+            }
+
+        }
+
+
     }
 }
