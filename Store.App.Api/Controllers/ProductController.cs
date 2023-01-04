@@ -46,17 +46,17 @@ namespace Store.App.Api.Controllers
         }
 
         [HttpDelete]
-        [Route("delete/{idProduct: int}")]
+        [Route("delete/{idProduct:int}")]
         public IActionResult DeleteProduct(int idProduct)
         {
             try
             {
-                Product productDeleted = _repoProduct.DeleteProduct(idProduct);
+                var productDeleted = _repoProduct.DeleteProduct(idProduct);
                 return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK ELIMINADO", response = productDeleted });
             }
             catch (Exception error)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, new { error.Message});
+                return StatusCode(StatusCodes.Status500InternalServerError, new { error.Message });
             }
 
         }
