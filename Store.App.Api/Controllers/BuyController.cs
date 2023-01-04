@@ -44,7 +44,21 @@ namespace Store.App.Api.Controllers
         }
 
 
+        [HttpGet]
+        [Route("get/{idBuy:int}")]
+        public IActionResult getBuy(int idBuy)
+        {
+            try
+            {
+                Buy buy = _repoBuy.GetBuy(idBuy);
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK", response = buy });
+            }
+            catch (Exception error)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { error.Message });
+            }
 
+        }
 
 
 
