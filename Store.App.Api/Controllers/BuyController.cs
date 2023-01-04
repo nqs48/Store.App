@@ -27,6 +27,22 @@ namespace Store.App.Api.Controllers
 
         }
 
+        [HttpGet]
+        [Route("all")]
+        public IActionResult BuyList()
+        {
+            try
+            {
+                IEnumerable<Buy> buyList = _repoBuy.GetAllBuys();
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK", response = buyList });
+            }
+            catch (Exception error)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { error.Message });
+            }
+
+        }
+
 
 
 
