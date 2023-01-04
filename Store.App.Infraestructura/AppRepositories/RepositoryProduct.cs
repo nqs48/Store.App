@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Store.App.Infraestructura.AppRepositories
 {
-    internal class RepositoryProduct : IRepositoryProduct
+    public class RepositoryProduct : IRepositoryProduct
     {
 
         private readonly AppContext _appContext;
