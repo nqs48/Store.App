@@ -9,12 +9,12 @@ namespace Store.App.Dominio
 {
     public class Buy
     { 
-        public string Id { get; set; }
+        public int Id { get; set; }
         public DateTime Date { get; set; }
         public string IdType { get; set; }
         public string IdClient { get; set; }
         public string ClientName { get; set; }
-        public IEnumerable<Product> products { get; set; }
+        public IEnumerable<Product> Products { get; set; }
 
     }
    

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Store.App.Infraestructura.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class Inicial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,7 +15,8 @@ namespace Store.App.Infraestructura.Migrations
                 name: "Buys",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IdType = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     IdClient = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -37,7 +38,7 @@ namespace Store.App.Infraestructura.Migrations
                     Enabled = table.Column<bool>(type: "bit", nullable: false),
                     Min = table.Column<int>(type: "int", nullable: false),
                     Max = table.Column<int>(type: "int", nullable: false),
-                    BuyId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    BuyId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
