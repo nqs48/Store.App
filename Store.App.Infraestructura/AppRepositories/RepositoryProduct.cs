@@ -19,6 +19,12 @@ namespace Store.App.Infraestructura.AppRepositories
         }
 
 
+        public IEnumerable<Product> GetAllProducts()
+        {
+            return _appContext.Products;
+        }
+
+
         public Product AddProduct(Product product)
         {
             var productAdd= _appContext.Products.Add(product);
@@ -29,13 +35,10 @@ namespace Store.App.Infraestructura.AppRepositories
 
         public void DeleteProduct(int idProduct)
         {
-            throw new NotImplementedException();
+            
         }
 
-        public IEnumerable<Product> GetAllProducts()
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public Product GetProduct(int idProduct)
         {
