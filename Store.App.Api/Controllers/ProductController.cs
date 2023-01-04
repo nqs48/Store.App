@@ -33,14 +33,30 @@ namespace Store.App.Api.Controllers
         [Route("all")]
         public IActionResult ProductList()
         {
-            IEnumerable<Product> productList = _repoProduct.GetAllProducts();
             try
             {
+                IEnumerable<Product> productList = _repoProduct.GetAllProducts();
                 return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK", response = productList });
             }
             catch (Exception error)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, new { error.Message, response = productList });
+                return StatusCode(StatusCodes.Status500InternalServerError, new { error.Message});
+            }
+
+        }
+
+        [HttpDelete]
+        [Route("delete/{idProduct: int}")]
+        public IActionResult DeleteProduct(int idProduct)
+        {
+            try
+            {
+                Product productDeleted = _repoProduct.DeleteProduct(idProduct);
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK ELIMINADO", response = productDeleted });
+            }
+            catch (Exception error)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { error.Message});
             }
 
         }
