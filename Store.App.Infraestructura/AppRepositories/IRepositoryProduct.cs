@@ -12,7 +12,7 @@ namespace Store.App.Infraestructura.AppRepositories
         IEnumerable<Product> GetAllProducts();
         Product AddProduct(Product product);
         Product UpdateProduct(Product product);
-        void DeleteProduct(int idProduct);
+        Product? DeleteProduct(int idProduct);
         Product GetProduct(int idProduct);
     }
 }
