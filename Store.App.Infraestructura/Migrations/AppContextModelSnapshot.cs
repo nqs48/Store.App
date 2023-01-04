@@ -46,8 +46,11 @@ namespace Store.App.Infraestructura.Migrations
 
             modelBuilder.Entity("Store.App.Dominio.Product", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("BuyId")
                         .HasColumnType("nvarchar(450)");

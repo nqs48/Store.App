@@ -12,8 +12,8 @@ using Store.App.Infraestructura;
 namespace Store.App.Infraestructura.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20230103235546_Inicial")]
-    partial class Inicial
+    [Migration("20230104041014_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,8 +49,11 @@ namespace Store.App.Infraestructura.Migrations
 
             modelBuilder.Entity("Store.App.Dominio.Product", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("BuyId")
                         .HasColumnType("nvarchar(450)");
