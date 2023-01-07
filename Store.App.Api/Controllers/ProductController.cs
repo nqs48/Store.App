@@ -19,7 +19,7 @@ namespace Store.App.Api.Controllers
             try
             {
                 Product productAdded=_repoProduct.AddProduct(product);
-                return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK", response= productAdded });
+                return StatusCode(StatusCodes.Status200OK, productAdded );
             }
             catch (Exception error)
             {
@@ -36,7 +36,7 @@ namespace Store.App.Api.Controllers
             try
             {
                 IEnumerable<Product> productList = _repoProduct.GetAllProducts();
-                return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK", response = productList });
+                return StatusCode(StatusCodes.Status200OK,  productList );
             }
             catch (Exception error)
             {
@@ -52,7 +52,7 @@ namespace Store.App.Api.Controllers
             try
             {
                 var productDeleted = _repoProduct.DeleteProduct(idProduct);
-                return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK ELIMINADO", response = productDeleted });
+                return StatusCode(StatusCodes.Status200OK, productDeleted );
             }
             catch (Exception error)
             {
@@ -69,7 +69,7 @@ namespace Store.App.Api.Controllers
             try
             {
                 var productDeleted = _repoProduct.LogicalDelete(idProduct);
-                return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK ELIMINADO", response = productDeleted });
+                return StatusCode(StatusCodes.Status200OK, productDeleted);
             }
             catch (Exception error)
             {
@@ -85,7 +85,7 @@ namespace Store.App.Api.Controllers
             try
             {
                 Product product = _repoProduct.GetProduct(idProduct);
-                return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK", response = product });
+                return StatusCode(StatusCodes.Status200OK, product);
             }
             catch (Exception error)
             {

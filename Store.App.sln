@@ -5,15 +5,11 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.App.Dominio", "Store.App.Dominio\Store.App.Dominio.csproj", "{6258B3E5-FAC3-4C5B-AD4D-32D5B820DDAD}"
 EndProject
-<<<<<<< Updated upstream
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.App.Api", "Store.App.Api\Store.App.Api.csproj", "{819CC2FD-8245-4B17-BF1A-E89FF2C46837}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.App.Infraestructura", "Store.App.Infraestructura\Store.App.Infraestructura.csproj", "{49355A00-CC69-40E5-B0C0-9DD07B563617}"
-=======
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.App.Infraestructura", "Store.App.Infraestructura\Store.App.Infraestructura.csproj", "{4D1877D0-EBCB-4012-8297-FFA87F351131}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.App.Api", "Store.App.Api\Store.App.Api.csproj", "{E6F5D31D-DDAE-4E6E-9371-9BEB7A89F411}"
->>>>>>> Stashed changes
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.App.Test", "Store.App.Test\Store.App.Test.csproj", "{A9C3A781-D2D3-49FA-A50D-3999203CB62A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,7 +21,6 @@ Global
 		{6258B3E5-FAC3-4C5B-AD4D-32D5B820DDAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6258B3E5-FAC3-4C5B-AD4D-32D5B820DDAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6258B3E5-FAC3-4C5B-AD4D-32D5B820DDAD}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< Updated upstream
 		{819CC2FD-8245-4B17-BF1A-E89FF2C46837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{819CC2FD-8245-4B17-BF1A-E89FF2C46837}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{819CC2FD-8245-4B17-BF1A-E89FF2C46837}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -34,16 +29,10 @@ Global
 		{49355A00-CC69-40E5-B0C0-9DD07B563617}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49355A00-CC69-40E5-B0C0-9DD07B563617}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49355A00-CC69-40E5-B0C0-9DD07B563617}.Release|Any CPU.Build.0 = Release|Any CPU
-=======
-		{4D1877D0-EBCB-4012-8297-FFA87F351131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D1877D0-EBCB-4012-8297-FFA87F351131}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D1877D0-EBCB-4012-8297-FFA87F351131}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D1877D0-EBCB-4012-8297-FFA87F351131}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E6F5D31D-DDAE-4E6E-9371-9BEB7A89F411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E6F5D31D-DDAE-4E6E-9371-9BEB7A89F411}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E6F5D31D-DDAE-4E6E-9371-9BEB7A89F411}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E6F5D31D-DDAE-4E6E-9371-9BEB7A89F411}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> Stashed changes
+		{A9C3A781-D2D3-49FA-A50D-3999203CB62A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9C3A781-D2D3-49FA-A50D-3999203CB62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9C3A781-D2D3-49FA-A50D-3999203CB62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9C3A781-D2D3-49FA-A50D-3999203CB62A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
