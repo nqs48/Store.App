@@ -1,5 +1,5 @@
-# Store.App
-Technical challenge to evaluate the knowledge acquired in the sofka talent zone applying knowledge in the .net platform and C# programming language
+# Store.App.Back
+Technical challenge to evaluate the knowledge acquired in the sofka talent zone applying knowledge in the .net platform and C# programming language and Angular Framework to frontend Module
 
 
 <!-- ABOUT THE PROJECT -->
@@ -12,6 +12,7 @@ Create a Rest service using .net it must have at least one GET and one POST . Th
 - Rest API with .net 
 - Use Relational DtaBase SQLServer
 - Used Postman for requests
+- Angular for Frontend
 
 
 ---
@@ -30,9 +31,44 @@ Create a Rest service using .net it must have at least one GET and one POST . Th
 
 ---
 
+# PROJECT REVIEW:
 
+
+### UI Index Web Page
+
+Responsive design of a dynamic web page with the available services.
+
+![image](https://res.cloudinary.com/adev48/image/upload/v1673110364/Sofka%20Assets/Store.App/front_main_fde5tm.png)
+
+
+
+
+
+---
+
+## PRODUCTS LIST:
+
+### Details of each created orduct
+
+Detail of each product, making use of **SQL Server** to save the information associated with the product.
+
+![image](https://res.cloudinary.com/adev48/image/upload/v1673110364/Sofka%20Assets/Store.App/products_govseg.png)
+
+---
 
 ## Built With
+
+This section contains the platforms that were used for the project.
+
+
+### Frontend
+* [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)
+* [Local Storage](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage)
+* [Tailwind CSS](https://tailwindui.com/)
+* [Angular Framework](https://angular.io/)
+
+
+### Backend
 
 This section contains the platforms that were used for the project.
 
@@ -40,11 +76,45 @@ This section contains the platforms that were used for the project.
 * [Git](https://git-scm.com/)
 * [.Net v 7.0]()
 * [SQL Server]()
+---
+
+### Installation for **FrontEnd Project**
+
+Install each one the pieces of software previously mentioned (Git).
 
 
-### Installation
+1. Clone the repo
 
-Install each one the pieces of software previously mentioned.
+- HTTPS 
+
+   ```
+   $ git clone https://github.com/nqs48/Store.App.Front.git
+   ```
+   
+ - SSH
+ 
+   ```
+   $ git clone git@github.com:nqs48/Store.App.Front.git
+   ```
+ 
+ 
+2. Open the project with VisualStudio Code (In the root proyect directory)
+
+   ```
+   $ code .
+   ```
+   
+3. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`
+
+   ```
+   ng serve -o
+   ```
+   
+---
+
+### Installation for **Backend Project**
+
+Install each one the pieces of software previously mentioned (Git).
 
 
 1. Clone the repo
@@ -104,7 +174,6 @@ Install each one the pieces of software previously mentioned.
    
    ``` 
   
-
 ---
 
 <!-- LICENSE -->
@@ -117,9 +186,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Collaborators
 ```
-
 Nestor Quiroga Suarez
-Jr. FrontEnd Developer
+Jr. Software Developer
 
 ```
 <p align="center">
