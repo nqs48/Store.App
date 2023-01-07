@@ -35,7 +35,7 @@ namespace Store.App.Api.Controllers
             try
             {
                 IEnumerable<Buy> buyList = _repoBuy.GetAllBuys();
-                return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK", response = buyList });
+                return StatusCode(StatusCodes.Status200OK, buyList );
             }
             catch (Exception error)
             {
@@ -52,7 +52,7 @@ namespace Store.App.Api.Controllers
             try
             {
                 Buy buy = _repoBuy.GetBuy(idBuy);
-                return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK", response = buy });
+                return StatusCode(StatusCodes.Status200OK, buy);
             }
             catch (Exception error)
             {
